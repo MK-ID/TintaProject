@@ -39,7 +39,7 @@
                 $basedatos ="proyecto";
                 $conectar = $_POST['unidad'];
                 $conexion = mysqli_connect($servidor, $usuario, $contra, $basedatos);
-                $sentencia = "select * from tPersonal where Unidad='$conectar'";
+                $sentencia = "select * from tPersonas where Unidad='$conectar'";
                 $lb=mysqli_query($conexion,$sentencia);
                 while($registro = mysqli_fetch_array($lb))
                 {
