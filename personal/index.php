@@ -33,7 +33,7 @@
                         <td>Unidad de trabajo</td>
                 </tr>
                 <?php //php desde aqui
-                $servidor = "localhost";
+                $servidor = "192.168.1.251";
                 $usuario = "cesar";
                 $contra = "tinta@1234";
                 $basedatos ="proyecto";
