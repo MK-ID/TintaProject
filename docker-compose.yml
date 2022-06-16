@@ -1,0 +1,47 @@
+version: '3.8'
+services:
+  dns:
+    image: "debian:bullseye"
+    container_name: dns
+    tty: true
+    networks:
+      mype:
+        ipv4_address: 192.168.1.254
+
+  web:
+    image: "debian:bullseye"
+    container_name: web
+    tty: true
+    networks:
+      mype:
+        ipv4_address: 192.168.1.252
+
+  nms:
+    image: "debian:bullseye"
+    container_name: nms
+    tty: true
+    networks:
+      mype:
+        ipv4_address: 192.168.1.240
+  db:
+    image: "mysql"
+    container_name: mysql
+    tty: true
+    environment:
+      MYSQL_ROOT_PASSWORD: "tinta@1234"
+      MYSQL_DATABASE: "proyecto"
+      MYSQL_USER: "cesar"
+      MYSQL_PASSWORD: "tinta@1234"
+    networks:
+      mype:
+        ipv4_address: 192.168.1.251
+networks:
+  mype:
+    name: mype5
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: br0
+    ipam:
+      config:
+        - subnet: "192.168.1.0/24"
+          gateway: "192.168.1.1"
