@@ -2,7 +2,7 @@ version: '3.8'
 services:
   dns:
     image: "debian:bullseye"
-    container_name: dns
+    container_name: DNS_CONTAINER
     tty: true
     networks:
       mype:
@@ -10,7 +10,7 @@ services:
 
   web:
     image: "debian:bullseye"
-    container_name: web
+    container_name: WEB_CONTAINER
     tty: true
     networks:
       mype:
@@ -18,14 +18,14 @@ services:
 
   nms:
     image: "debian:bullseye"
-    container_name: nms
+    container_name: NMS_CONTAINER
     tty: true
     networks:
       mype:
         ipv4_address: 192.168.1.240
   db:
     image: "mysql"
-    container_name: mysql
+    container_name: MYSQL
     tty: true
     environment:
       MYSQL_ROOT_PASSWORD: "tinta@1234"
