@@ -14,7 +14,7 @@
 </header>
  <section id="seccion">
  <article>
-        <h1>Escoja la unidad que desea: </h1>
+        <h1>Escoja una unidad: </h1>
         <form action='index.php' method='post'>
         <select id="escoger" name="unidad">
                 <option value="RRHH">RRHH</option>
