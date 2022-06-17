@@ -19,7 +19,6 @@
         <select id="escoger" name="unidad">
                 <option value="RRHH">RRHH</option>
                 <option value="Logistica">Logistica</option>
-                <option value="Finanzas">Finanzas</option>
         </select>
         <br>
         <input type="submit" name="enviar" value ="Buscar">

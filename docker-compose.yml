@@ -7,6 +7,14 @@ services:
     networks:
       mype:
         ipv4_address: 192.168.1.254
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: "1024m"
+        reservations:
+          cpus: "0.5"
+          memory: "512m"
 
   web:
     image: "debian:bullseye"
@@ -15,6 +23,14 @@ services:
     networks:
       mype:
         ipv4_address: 192.168.1.252
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: "1024m"
+        reservations:
+          cpus: "0.5"
+          memory: "512m"
 
   nms:
     image: "debian:bullseye"
@@ -23,6 +39,14 @@ services:
     networks:
       mype:
         ipv4_address: 192.168.1.240
+    deploy:
+      resources:
+        limits:
+          cpus: "2"
+          memory: "1024m"
+        reservations:
+          cpus: "0.5"
+          memory: "512m"
   db:
     image: "mysql"
     container_name: MYSQL
